@@ -1,5 +1,6 @@
 {
   "name": "pokedex",
+  "author": "Ariel Betti",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
