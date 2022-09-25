@@ -3,9 +3,12 @@ import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider } from "styled-components";
 
 import AppRouter from "./routes";
 import "./index.css";
+import { ResetCss } from "./theme/globalStyles";
+import { dark } from "./theme";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -14,9 +17,12 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <RecoilRoot>
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      <ThemeProvider theme={dark()}>
+        <ResetCss />
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </ThemeProvider>
     </RecoilRoot>
   </StrictMode>
 );
