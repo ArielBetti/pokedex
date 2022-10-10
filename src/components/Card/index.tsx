@@ -1,10 +1,10 @@
 import { FC } from "react";
+import { Flexbox } from "webetti-react-sdk";
 import { TPokemonType } from "../../interface";
-import { FlexBox } from "../Flexbox";
 import * as Atom from "./atoms";
 
 interface ICardProps {
-  id: string;
+  id: number;
   image: string;
   name: string;
   preview?: string;
@@ -19,9 +19,9 @@ const Card: FC<ICardProps> = ({ id, image, name, preview, type }) => {
       justify="space-between"
       direction="column"
     >
-      <FlexBox align="center" justify="flex-end" direction="row">
+      <Flexbox align="center" justify="flex-end" direction="row">
         <Atom.PokemonText type={type}>#{id}</Atom.PokemonText>
-      </FlexBox>
+      </Flexbox>
       <Atom.PokemonSpot
         type={type}
         align="center"
@@ -30,10 +30,10 @@ const Card: FC<ICardProps> = ({ id, image, name, preview, type }) => {
       >
         <Atom.PokemonSprite src={image} alt="" />
       </Atom.PokemonSpot>
-      <FlexBox align="center" justify="space-between" direction="row">
+      <Flexbox align="center" justify="space-between" direction="row">
         <Atom.PokemonText type={type}>{name}</Atom.PokemonText>
         {preview && <img src={preview} alt="" />}
-      </FlexBox>
+      </Flexbox>
     </Atom.Container>
   );
 };

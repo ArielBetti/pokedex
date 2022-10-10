@@ -1,4 +1,3 @@
-import { FlexBox } from "./Flexbox";
-import { Container } from "./Container";
+import Card from "./Card";
 
-export { FlexBox, Container };
+export { Card };
