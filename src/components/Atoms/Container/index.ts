@@ -1,5 +1,3 @@
-// Container
-
 import styled, { DefaultTheme } from "styled-components";
 
 export const Container = styled.div`
