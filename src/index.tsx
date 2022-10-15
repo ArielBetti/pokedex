@@ -6,9 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "styled-components";
 
 import AppRouter from "./routes";
-import "./index.css";
 import { ResetCss } from "./theme/globalStyles";
 import { dark } from "./theme";
+import { Header } from "./components";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,6 +20,7 @@ root.render(
       <ThemeProvider theme={dark()}>
         <ResetCss />
         <BrowserRouter>
+          <Header />
           <AppRouter />
         </BrowserRouter>
       </ThemeProvider>
